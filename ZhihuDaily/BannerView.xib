@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BannerView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="pmi-jJ-2Xs">
+                    <rect key="frame" x="280" y="563" width="39" height="37"/>
+                    <animations/>
+                </pageControl>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3z-vj-KZZ" customClass="BannerScrollView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <animations/>
+                </scrollView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pmi-jJ-2Xs" secondAttribute="bottom" id="44A-Gp-YwS"/>
+                <constraint firstItem="R3z-vj-KZZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="A49-lX-QnC"/>
+                <constraint firstAttribute="trailing" secondItem="R3z-vj-KZZ" secondAttribute="trailing" id="DGe-SS-8GL"/>
+                <constraint firstAttribute="bottom" secondItem="R3z-vj-KZZ" secondAttribute="bottom" id="EW8-ib-fmJ"/>
+                <constraint firstItem="pmi-jJ-2Xs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KHf-YV-z6M"/>
+                <constraint firstItem="R3z-vj-KZZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SdI-zd-o4M"/>
+            </constraints>
+            <connections>
+                <outlet property="pageControl" destination="pmi-jJ-2Xs" id="2Ko-1J-PQP"/>
+                <outlet property="scrollView" destination="R3z-vj-KZZ" id="B1F-fS-w1J"/>
+                <outlet property="topLayout" destination="A49-lX-QnC" id="0dL-Ra-8Lk"/>
+            </connections>
+            <point key="canvasLocation" x="-38" y="-233"/>
+        </view>
+    </objects>
+</document>
